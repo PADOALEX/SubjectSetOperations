@@ -6,15 +6,15 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-const int MAX_SUBJECTS = 32; // Максимальна кількість предметів для нашого бітсету
-// Структура для зберігання інформації про предмет
+const int MAX_SUBJECTS = 32; // РњР°РєСЃРёРјР°Р»СЊРЅР° РєС–Р»СЊРєС–СЃС‚СЊ РїСЂРµРґРјРµС‚С–РІ РґР»СЏ РЅР°С€РѕРіРѕ Р±С–С‚СЃРµС‚Сѓ
+// РЎС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ Р·Р±РµСЂС–РіР°РЅРЅСЏ С–РЅС„РѕСЂРјР°С†С–С— РїСЂРѕ РїСЂРµРґРјРµС‚
 struct Subject
 {
     int id;
     string name;
     string category;
 };
-// Клас для керування операціями з множинами академічних предметів
+// РљР»Р°СЃ РґР»СЏ РєРµСЂСѓРІР°РЅРЅСЏ РѕРїРµСЂР°С†С–СЏРјРё Р· РјРЅРѕР¶РёРЅР°РјРё Р°РєР°РґРµРјС–С‡РЅРёС… РїСЂРµРґРјРµС‚С–РІ
 class SubjectSetOperations
 {
 private:
@@ -22,18 +22,18 @@ private:
     map<string, set<int>> namedSets;
     map<string, bitset<MAX_SUBJECTS>> namedBitsets;
 public:
-    // Конструктор/Деструктор
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ/Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
     SubjectSetOperations();
     ~SubjectSetOperations() = default;
-    // Ініціалізація бази даних предметів
+    // Р†РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ Р±Р°Р·Рё РґР°РЅРёС… РїСЂРµРґРјРµС‚С–РІ
     void initializeSubjects();
-    // Функції відображення
+    // Р¤СѓРЅРєС†С–С— РІС–РґРѕР±СЂР°Р¶РµРЅРЅСЏ
     void displayAllSubjects() const;
     void displaySet(const string& setName) const;
     void displayAllSets() const;
-    // Функції керування множинами
+    // Р¤СѓРЅРєС†С–С— РєРµСЂСѓРІР°РЅРЅСЏ РјРЅРѕР¶РёРЅР°РјРё
     void createSet(const string& setName);
-    // Операції над множинами
+    // РћРїРµСЂР°С†С–С— РЅР°Рґ РјРЅРѕР¶РёРЅР°РјРё
     void unionSets(const string& set1Name, const string& set2Name, const string& resultName);
     void intersectionSets(const string& set1Name, const string& set2Name, const string& resultName);
     void symmetricDifference(const string& set1Name, const string& set2Name, const string& resultName);
